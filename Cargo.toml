@@ -1,0 +1,10 @@
+[workspace]
+
+members = [
+    "compiler",
+    "vm",
+    "kappa",
+]
+
+resolver = "2"
+
