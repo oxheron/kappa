@@ -1,9 +1,11 @@
+Linked list ideas
 
-func add_node(Node && node, data) -> (Node &&) {
-    node.forward = Node(data)
+```
+
+
+struct Node {
+    Link link; 
+    i64 data;
 }
 
-func main () -> (void) {
-    Node;
-
-{}
+```
