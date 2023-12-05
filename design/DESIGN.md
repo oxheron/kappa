@@ -17,43 +17,43 @@ Immutable (whatever that means) in what you can do to them and reassignment
 
 # Variable Assignment and "Reassignment"
 
-'''
+```
 let i64 x = 64;
 let x = x * x;
-'''
+```
 
 With data structures
 
-'''
+```
 struct Test {
     i64 test;
 }
 
 let Test = Test(1) 
 let test.test = 3
-'''
+```
 
 Of course with the first syntax this is valid
-'''
+```
 let i64 x = 64;
 let string x = "string";
-'''
+```
 
 But this is a compiler error 
-'''
+```
 let Test = Test(1)
 let string test.test = "test"
-'''
+```
 
 Or indeed any type after the let keyword, even if that is the type of the data 
 
 # General Function Structure
 
-'''
+```
 func add_to_all (i64[] args, ) -> () {
     len(args)
 }
-'''
+```
 
 Lambda 
 
