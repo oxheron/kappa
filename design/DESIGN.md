@@ -1,51 +1,46 @@
+// High level features
+
+
+# How is this different that haskell, elixir, erlang, etc.
+
+Optimizer - built to make some of the more imperative features feasible
+This includes heap based data (pointers, arrays)
+"Feels more like" an imperative language, but has all of the benifits of pf
+
+
+
+# Immutablity
+Variables are immutable
+
+```
+x: i64 = 64
+
+// For this obviously x is a new object 
+x: String = String(x)
+
+// More complicated copy 
+y: String = "hello, "
+y: = y.append("world")
+```
+
+This is harder with large data (see [optimizations](arch/OPTIMIZATIONS.md))
+
+So every new variable must act like a deep copy
+Of course much of this can be optimized away
+
 # Assignment / Declaration Semantics 
-A data type with heap data must be moved from (declared invalid) when setting something equal to it
-Additionally the data in the type must be declared invalid and dealt with (deleted immediatly)
-By default objects shallow copy between eachother or do something functionally equivalent
-(because copies of data types with heap data are declared invalid this holds true for those objects)
-For the moves you can just reuse the old data entirely because that object is invalid
-For the fully shallow copies this might be done if it can, as an optimization
-Clone operations exist to do a deep copy for objects with heap data 
+Scope of data is still compiler determined
+If something 
 
-2 types of objects: 
-Owners 
-Can be immutable and mutable (whatever that means)
 
-Referances 
-Immutable (whatever that means) in what you can do to them and reassignment 
-(probably the latter, def the former)
-
-# Variable Assignment and "Reassignment"
+# Values  
 
 ```
 let i64 x = 64;
 let x = x * x;
 ```
 
-With data structures
 
-```
-struct Test {
-    i64 test;
-}
-
-let Test = Test(1) 
-let test.test = 3
-```
-
-Of course with the first syntax this is valid
-```
-let i64 x = 64;
-let string x = "string";
-```
-
-But this is a compiler error 
-```
-let Test = Test(1)
-let string test.test = "test"
-```
-
-Or indeed any type after the let keyword, even if that is the type of the data 
 
 # General Function Structure
 
