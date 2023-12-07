@@ -1,8 +1,8 @@
 
-Large amounts of data is a bit harder to deal with
-A few things can be done
-You can just do it how it would be done with strict eval (ofc this applies to overwrites only)
+Large amounts of data is a bit harder to deal with.
+A few things can be done.
 
+You can just do it how it would be done with strict eval (ofc this applies to overwrites only).
 And store the edits somewhere (for lightly edited structure) 
 For heavy edits the performance time is still roughly the same, and the memory usage is more 
 But memory can be saved in other ways

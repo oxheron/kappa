@@ -23,33 +23,18 @@ y: String = "hello, "
 y: = y.append("world")
 ```
 
-This is harder with large data (see [optimizations](arch/OPTIMIZATIONS.md))
+This is harder with large data (see [Optimizations](arch/OPTIMIZATIONS.md))
 
 So every new variable must act like a deep copy
 Of course much of this can be optimized away
 
-# Assignment / Declaration Semantics 
-Scope of data is still compiler determined
-If something 
+# Functions 
 
+This can be declared anywhere
+All arguments are technically considered "free parameters"
+This means they can be based on the environment and return a function that has the rest of the arguments
 
-# Values  
-
-```
-let i64 x = 64;
-let x = x * x;
-```
-
-
-
-# General Function Structure
-
-```
-func add_to_all (i64[] args, ) -> () {
-    len(args)
-}
-```
-
-Lambda 
-
-name = () -> {}
+name = (args) [rvals] 
+{
+   code 
+} 
